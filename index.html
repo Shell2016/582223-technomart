@@ -55,26 +55,31 @@
             <div class="promo-item promo-materials">
                 <h3>Материалы</h3>
                 <a class="btn promo-btn" href="#">На любой вкус</a>
+                <span class="new new-active">new</span>
             </div>
 
             <div class="promo-item promo-tools">
                 <h3>Инструмент</h3>
                 <a class="btn promo-btn" href="#">На все случаи</a>
+                <span class="new">new</span>
             </div>
 
             <div class="promo-item promo-vehicles">
                 <h3>Техника</h3>
                 <a class="btn promo-btn" href="#">Для стройки</a>
+                <span class="new">new</span>
             </div>
 
             <div class="promo-item promo-discounts">
                 <h3>Скидки 50%</h3>
                 <a class="btn promo-btn" href="#">На 350 товаров</a>
+                <span class="new">new</span>
             </div>
 
             <div class="promo-item promo-delivery">
                 <h3>Доставка</h3>
                 <a class="btn promo-btn" href="#">Бесплатно</a>
+                <span class="new">new</span>
             </div>
 
             <div class="promo-slider">
@@ -130,7 +135,7 @@
                     <span class="new">new</span>
                 </li>
 
-                 <li class="products-item products-item-new">
+                 <li class="products-item">
                     <div class="products-item-hover">
                         <button class="product-btn buy-btn" type="button">Купить</button>
                         <button class="product-btn bookmark-btn" type="button">В закладки</button>
@@ -138,7 +143,7 @@
                     <h3>Перфоратор BOSCH BFG 2000</h3>
                     <span class="price old-price"></span>
                     <span class="price">12500 Р.</span>
-                    <span class="new">new</span>
+                    <span class="new new-active">new</span>
                 </li>
             </ul>
         </section>
@@ -160,14 +165,14 @@
 
         <section class="services">
             <h2>Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценамми! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             <section class="services-slider">
-                <input type="radio" name="toggle" id="delivery" checked>
-                <input type="radio" name="toggle" id="waranty">
-                <input type="radio" name="toggle" id="credit">
                 <div class="services-slider-controls">
+                    <input class="services-toggle" type="radio" name="toggle" id="delivery" checked>
                     <label for="delivery">Доставка</label>
+                    <input class="services-toggle" type="radio" name="toggle" id="waranty">
                     <label for="waranty">Гарантия</label>
+                    <input class="services-toggle" type="radio" name="toggle" id="credit">
                     <label for="credit">Кредит</label>
                 </div>
                 <div class="services-slider-item">
@@ -211,20 +216,18 @@
         <div class="top-footer">
             <div class="footer-info">
                 <span class="logo footer-logo">Техномарт</span>
-                <p>г.Санкт-Перербург, ул.Б.Конюшенная, д. 19/8 <br>
+                <p>г.Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
                 +7 (812) 555-05-55</p>
             </div>
-            <nav class="footer-top-nav">
-                <ul class="footer-top-nav-list">
+            <nav class="footer-nav">
+                <ul class="footer-top-nav">
                     <li class="footer-top-nav-item"><a href="#">Компания</a></li>
                     <li class="footer-top-nav-item"><a href="#">Новости</a></li>
                     <li class="footer-top-nav-item"><a href="#">Каталог</a></li>
                     <li class="footer-top-nav-item"><a href="#">Доставка</a></li>
                     <li class="footer-top-nav-item"><a href="#">Контакты</a></li>
                 </ul>
-            </nav>
-            <nav class="footer-bottom-nav">
-                <ul class="footer-bottom-nav-list">
+                <ul class="footer-bottom-nav">
                     <li class="footer-bottom-nav-item"><a href="#">Материалы</a></li>
                     <li class="footer-bottom-nav-item"><a href="#">Техника</a></li>
                     <li class="footer-bottom-nav-item"><a href="#">Инструмент</a></li>
@@ -234,7 +237,7 @@
         </div>
         <div class="bottom-footer">
             <div class="footer-copyright">
-            <p>&copy; 2010-2017  &laquo;Компания Техномарт&raquo;<br>
+            <p>&copy; 2010-2017  &laquo;Компания Техномарт&raquo;
             Все права защищены</p>
             </div>
             <div class="social-block">
@@ -259,7 +262,7 @@
     </footer>
 
     <div class="modal-writeus">
-        <span class="modal-writeus-close">Закрыть</span>
+        <button class="modal-writeus-close" type="button">Закрыть</button>
         <!-- Здесь будет форма -->
     </div>
 
