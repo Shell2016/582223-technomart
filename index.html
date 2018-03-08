@@ -11,7 +11,12 @@
 
         <div class="top-header">
             <a class="logo">Техномарт</a>
-            <!-- форма поиска -->
+            <form action="https://echo.htmlacademy.ru/" method="post" class="search-form">
+                <div class="search-item">
+                    <label class="visually-hidden" for="user-search">Поле поиска</label>
+                    <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
+                </div>
+            </form>
             <ul class="order-list">
                 <li class="order-list-item bookmarks"><a href="#">Закладки:0</a></li>
                 <li class="order-list-item cart"><a href="#">Корзина:0</a></li>
@@ -94,8 +99,8 @@
                     <p>Настоящие мужские игрушки</p>
                     <a class="btn" href="catalog.html">Открыть каталог</a>
                 </div>
-                <span class="promo-left-control">Влево</span>
-                <span class="promo-right-control">Вправо</span>
+                <button class="promo-left-control" type="button">Влево</button>
+                <button class="promo-right-control" type="button">Вправо</span>
             </div>
         </section>
 
@@ -274,10 +279,34 @@
         </div>
     </footer>
 
-    <div class="modal-writeus">
-        <button class="modal-writeus-close" type="button">Закрыть</button>
-        <!-- Здесь будет форма -->
-    </div>
+    <section class="modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <button class="modal-close" type="button">Закрыть форму</button>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="feedback-form-top">
+                <div class="feedback-item">
+                    <label for="feedback-name">Ваше имя:</label>
+                    <input class="name-field" type="text" name="name" id="feedback-name" placeholder="Представьтесь, пожалуйста">
+                </div>
+                <div class="feedback-item">
+                    <label for="feedback-email">Ваш e-mail:</label>
+                    <input class="email-field" type="email" name="email" id="feedback-email" placeholder="Для отправки ответа">
+                </div>
+                <div class="feedback-item">
+                    <label for="feedback-comment">Текст письма:</label>
+                    <textarea class="comment-field" name="comment" id="feedback-comment" cols="" rows="" placeholder="В свободной форме"></textarea>
+                </div>
+            </div>
+            <div class="feedback-form-bottom">
+                <button class="btn" type="submit">Отправить</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="map-popup">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <button class="modal-close" type="button">Закрыть форму</button>
+    </section>
 
 </body>
 </html>

@@ -11,10 +11,15 @@
 
         <div class="top-header">
             <a class="logo" href="index.html">Техномарт</a>
-            <!-- форма поиска -->
+            <form action="https://echo.htmlacademy.ru/" method="post" class="search-form">
+                <div class="search-item">
+                    <label class="visually-hidden" for="user-search">Поле поиска</label>
+                    <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
+                </div>
+            </form>
             <ul class="order-list">
                 <li class="order-list-item bookmarks"><a href="#">Закладки:0</a></li>
-                <li class="order-list-item cart cart-added"><a href="#">Корзина:0</a></li>
+                <li class="order-list-item cart cart-added"><a href="#">Корзина:10</a></li>
                 <li class="order-list-item order"><a href="#">Оформить заказ</a></li>
             </ul>
         </div>
@@ -263,12 +268,17 @@
         </div>
     </footer>
 
-    <div class="modal-cart">
-        <p>Товар добавлен в корзину!</p>
-        <a href="#" class="btn">Оформить заказ</a>
-        <a href="#" class="btn">Продолжить покупки</a>
-        <button class="modal-cart-close" type="button">Закрыть</button>
-    </div>
+    <section class="modal-cart">
+        <h2 class="visually-hidden">Добавление товара в корзину</h2>
+        <div class="modal-cart-top">
+            <p>Товар добавлен в корзину!</p>
+        </div>
+        <div class="modal-cart-bottom">
+            <a href="#" class="btn">Оформить заказ</a>
+            <a href="#" class="btn">Продолжить покупки</a>
+        </div>
+        <button class="modal-close" type="button">Закрыть форму</button>
+    </section>
 
 </body>
 </html>
