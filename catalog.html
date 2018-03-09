@@ -68,7 +68,62 @@
 
             <div class="filter">
                 <p>Фильтр:</p>
-             <!-- Здесь будет форма -->
+                <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+                    <fieldset class="filter-fieldset filter-price">
+                        <legend>Цена:</legend>
+                        <div class="range-filter-top">
+                            <div class="range-control range-control-min"></div>
+                            <div class="range-control range-control-max"></div>
+                            <div class="range-bar"></div>
+                        </div>
+                        <div class="range-filter-bottom">
+                            <input class="range-input range-input-min" type="text" name="min-price" id="filter-min-price" value="0">
+                            <label for="filter-min-price" class="visually-hidden">Минимальная цена</label>
+                            <span class="input-dash">-</span>
+                            <input class="range-input range-input-max" type="text" name="max-price" id="filter-max-price" value="30000">
+                            <label for="filter-max-price" class="visually-hidden">Максимальная цена</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-fieldset filter-manufacturers">
+                        <legend>Производители:</legend>
+                        <ul>
+                            <li class="filter-manufacturers-item">
+                                <input class="checkbox-filter visually-hidden" type="checkbox" name="checkbox-bosch" id="filter-bosch" checked>
+                                <label for="filter-bosch">Bosch</label>
+                            </li>
+                            <li class="filter-manufacturers-item">
+                                <input class="checkbox-filter visually-hidden" type="checkbox" name="checkbox-interskol" id="filter-interskol">
+                                <label for="filter-interskol">Interskol</label>
+                            </li>
+                            <li class="filter-manufacturers-item">
+                                <input class="checkbox-filter visually-hidden" type="checkbox" name="checkbox-makita" id="filter-makita" checked>
+                                <label for="filter-makita">Makita</label>
+                            </li>
+                            <li class="filter-manufacturers-item">
+                                <input class="checkbox-filter visually-hidden" type="checkbox" name="checkbox-dewalt" id="filter-dewalt">
+                                <label for="filter-dewalt">Dewalt</label>
+                            </li>
+                            <li class="filter-manufacturers-item">
+                                <input class="checkbox-filter visually-hidden" type="checkbox" name="checkbox-hitachi" id="filter-hitachi">
+                                <label for="filter-hitachi">Hitachi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filter-fieldset filter-power">
+                        <legend>Питание:</legend>
+                        <ul>
+                            <li class="filter-power-item">
+                                <input class="radio-filter visually-hidden" type="radio" name="power" id="filter-battery" value="battery">
+                                <label for="filter-battery">Аккумуляторные</label>
+                            </li>
+                            <li class="filter-power-item">
+                                <input class="radio-filter visually-hidden" type="radio" name="power" id="filter-network" value="network">
+                                <label for="filter-network">Сетевые</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="btn submit-btn" type="submit">Показать</button>
+                </form>
             </div>
 
             <div class="catalog-grid">
