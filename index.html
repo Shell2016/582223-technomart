@@ -12,10 +12,9 @@
         <div class="top-header">
             <a class="logo">Техномарт</a>
             <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
-                <div class="search-item">
-                    <label class="visually-hidden" for="user-search">Поле поиска</label>
-                    <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
-                </div>
+                <label class="visually-hidden" for="user-search">Поле поиска</label>
+                <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
+                <button type="submit" class="visually-hidden">Поиск</button>
             </form>
             <ul class="order-list">
                 <li class="order-list-item bookmarks"><a href="#">Закладки:0</a></li>
@@ -284,18 +283,18 @@
         <button class="modal-close" type="button">Закрыть форму</button>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="feedback-form-top">
-                <div class="feedback-item">
+                <p class="feedback-item">
                     <label for="feedback-name">Ваше имя:</label>
                     <input class="name-field" type="text" name="name" id="feedback-name" placeholder="Представьтесь, пожалуйста">
-                </div>
-                <div class="feedback-item">
+                </p>
+                <p class="feedback-item">
                     <label for="feedback-email">Ваш e-mail:</label>
                     <input class="email-field" type="email" name="email" id="feedback-email" placeholder="Для отправки ответа">
-                </div>
-                <div class="feedback-item">
+                </p>
+                <p class="feedback-item">
                     <label for="feedback-comment">Текст письма:</label>
                     <textarea class="comment-field" name="comment" id="feedback-comment" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-                </div>
+                </p>
             </div>
             <div class="feedback-form-bottom">
                 <button class="btn" type="submit">Отправить</button>
