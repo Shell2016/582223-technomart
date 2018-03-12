@@ -48,10 +48,12 @@ a {
   color: #fff;
   font-size: 17px;
   line-height: 18px;
+  /*max-height: 42px;*/
 }
 
 .top-header .container {
   display: flex;
+  align-items: flex-start;
 }
 
 .order-list {
@@ -63,7 +65,7 @@ a {
   line-height: 24px;
   text-transform: uppercase;
   background-color: #ee3643;
-  padding: 10px 55px;
+  padding: 9px 55px;
   box-shadow: 0px 5px #b52933;
   text-align: center;
   vertical-align: center;
@@ -99,7 +101,7 @@ a {
 }
 
 .search-field:focus::placeholder {
-  background-color: #000;
+  color: #000;
 }
 
 .order-list {
