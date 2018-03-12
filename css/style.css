@@ -9,8 +9,23 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  background-color: #fff;
+  color: #000;
+}
 
+.container {
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -24,30 +39,143 @@ body {
   overflow: hidden;
 }
 
-h1, h2 {
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
 .main-header {
   background-color: #f3f7f9;
 }
 
 .top-header {
   background-color: #293449;
+  color: #fff;
+  font-size: 17px;
+  line-height: 18px;
 }
 
-.top-header a {
-  color: #fff;
+.top-header .container {
+  display: flex;
+}
+
+.order-list {
+  display: flex;
 }
 
 .logo {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  background-color: #ee3643;
+  padding: 10px 55px;
+  box-shadow: 0px 5px #b52933;
+  text-align: center;
+  vertical-align: center;
 }
 
+.logo:hover,
+.logo:focus {
+  background-color: #ca2c37;
+  box-shadow: 0px 5px #9a212a;
+}
 
+.logo:active {
+  background-color: #ba2732;
+  box-shadow: 0px 5px #8e1e26;
+}
 
+.top-header .search-field {
+  background-color: #293449;
+  border: none;
+}
+
+.search-field::placeholder {
+  color: #fff;
+}
+
+.search-field:hover {
+  background-color: #212a3a;
+}
+
+.search-field:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.search-field:focus::placeholder {
+  background-color: #000;
+}
+
+.order-list {
+  list-style: none;
+}
+
+.order-list-item a {
+  color: inherit;
+}
+
+.order-list-item a:hover,
+.order-list-item a:focus {
+  background-color: #212a3a;
+}
+
+.order-list-item a:active {
+  background-color: #161d29;
+}
+
+.order-list-item.order a {
+  background-color: #63a63e;
+}
+
+.order-list-item.order a:hover,
+.order-list-item.order a:focus {
+  background-color: #5fbb2d;
+}
+
+.order-list-item.order a:active {
+  background-color: #518534;
+}
+
+.main-nav {
+  background-color: #32425c;
+}
+
+.header-shop-description {
+  font-style: italic;
+  color: #ee3643;
+}
+
+.header-phone {
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  color: #e9292a;
+  border: 3px solid #fff;
+}
+
+.header-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.user-block ul {
+  list-style: none;
+}
+
+.user-block-btn {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000;
+}
+
+.user-block-btn a {
+  color: #000;
+  background-color: #fff;
+}
+
+.user-block-btn a:hover,
+.user-block-btn a:focus {
+  color: #ee3643;
+}
+
+.user-block-btn a:active {
+  color: #000;
+  opacity: 0.3;
+}
