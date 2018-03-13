@@ -73,6 +73,7 @@ a {
 
 .logo:hover,
 .logo:focus {
+  outline: none;
   background-color: #ca2c37;
   box-shadow: 0px 5px #9a212a;
 }
@@ -114,6 +115,7 @@ a {
 
 .order-list-item a:hover,
 .order-list-item a:focus {
+  outline: none;
   background-color: #212a3a;
 }
 
@@ -127,6 +129,7 @@ a {
 
 .order-list-item.order a:hover,
 .order-list-item.order a:focus {
+  outline: none;
   background-color: #5fbb2d;
 }
 
@@ -164,7 +167,6 @@ a {
 .user-block-btn {
   font-size: 21px;
   line-height: 21px;
-  color: #000;
 }
 
 .user-block-btn a {
@@ -174,6 +176,7 @@ a {
 
 .user-block-btn a:hover,
 .user-block-btn a:focus {
+  outline: none;
   color: #ee3643;
 }
 
