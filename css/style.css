@@ -230,11 +230,14 @@ a {
 
 .btn {
   border: none;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #fff;
   text-transform: uppercase;
   background-color: #ee3643;
+  border-radius: 4px;
 }
 
 .btn:hover,
@@ -293,7 +296,102 @@ a {
   font-weight: 400;
 }
 
-.popular-products-top {
+.caption-wrapper {
   background-color: #f9f5f0;
 }
 
+.products-list {
+  list-style: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+.products-item {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.products-item:hover {
+  box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+  border: none;
+}
+
+.products-item h3 {
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+}
+
+.price {
+  color: #fff;
+  background-color: #ee3643;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.price.old-price {
+  color: #a9a9a9;
+  background-color: #fff;
+  text-decoration: line-through;
+}
+
+.buy-btn {
+  background-color: #63a63e;
+  box-shadow: inset 0px -3px #367315;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: #5fbb2d;
+}
+
+.buy-btn:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.bookmark-btn {
+  background-color: #fff;
+  border: 3px solid #63a63e;
+  color: #32425c;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn:focus {
+  border-color: #32425c;
+  background-color: #fff;
+}
+
+.bookmark-btn:active {
+  border-color: #32425c;
+  background-color: #fff;
+  opacity: 0.3;
+}
+
+.manufacturers h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+  font-weight: 400;
+}
+
+.manufacturers-list {
+  list-style: none;
+}
+
+.manufacturers-item {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.manufacturers-item:hover {
+  box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+  border: none;
+}
+
+.manufacturers-item:active {
+  border: none;
+  box-shadow: 0px 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
+}
