@@ -268,7 +268,7 @@ a {
   color: #fff;
   text-transform: uppercase;
   background-color: #ee3643;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .btn:hover,
@@ -593,10 +593,6 @@ a {
   text-decoration: none;
 }
 
-.perforator-info {
-  background-color: #f3f7f9;
-}
-
 .breadcrumbs {
   list-style: none;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -647,6 +643,8 @@ a {
 .range-filter-bottom input {
   background-color: #f7f3ec;
   border: none;
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .filter-fieldset ul {
@@ -697,6 +695,114 @@ a {
   border: none;
 }
 
+.pagination {
+  list-style: none;
+}
 
+.pagination-item {
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
 
+.pagination-item a {
+  color: #000;
+  border: 1px solid #e5e5e5;
+  width: 38px;
+  height: 38px;
+  border-radius: 2px;
+}
 
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-item a:active {
+  border: 1px solid #ee3643;
+}
+
+.pagination-current a {
+  background-color: #ee3643;
+  color: #fff;
+}
+
+.pagination-hidden {
+  display: none;
+}
+
+.perforator-info {
+  background-color: #f3f7f9;
+}
+
+.perforator-info h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 400;  ;
+}
+
+.perforator-info p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.modal-feedback {
+  background-color: #fff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+  width: 620px;
+  height: 430px;
+}
+
+.feedback-item label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.feedback-item input::placeholder,
+.feedback-item textarea::placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.feedback-item input,
+.feedback-item textarea {
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.feedback-form-bottom {
+  background-color: #f4f4f4;
+}
+
+.modal-cart {
+  background-color: #fff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+  width: 620px;
+  height: 282px;
+}
+
+.modal-cart-top p {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.modal-cart-bottom {
+  background-color: #f1f1f1;
+}
+
+.btn.btn-continue {
+  background-color: #fff;
+  color: #000;
+}
+
+.modal-cart-top {
+  background: url("../img/form-1.svg") no-repeat;
+}
