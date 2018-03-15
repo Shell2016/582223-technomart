@@ -41,6 +41,8 @@ a {
 
 .main-header {
   background-color: #f3f7f9;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .top-header {
@@ -48,6 +50,11 @@ a {
   color: #fff;
   font-size: 17px;
   line-height: 18px;
+}
+
+.top-header .container {
+  display: flex;
+  margin-bottom: 46px;
 }
 
 .logo {
@@ -58,6 +65,9 @@ a {
   color: #fff;
   box-shadow: 0px 5px #b52933;
   text-align: center;
+  width: 220px;
+  padding-top: 8px;
+  padding-bottom: 5px;
 }
 
 .logo:hover,
@@ -69,6 +79,10 @@ a {
 .logo:active {
   background-color: #ba2732;
   box-shadow: 0px 5px #8e1e26;
+}
+
+.search-form {
+  width: 270px;
 }
 
 .top-header .search-field {
@@ -94,6 +108,14 @@ a {
 
 .order-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  display: flex;
+}
+
+.order-list-item {
+  width: 150px;
 }
 
 .order-list-item a {
@@ -128,11 +150,30 @@ a {
   background-color: #ee3643;
 }
 
+.header-info {
+  display: flex;
+  margin-bottom: 41px;
+}
+
 .header-shop-description {
   font-style: italic;
   color: #ee3643;
   font-size: 16px;
   line-height: 23px;
+  width: 300px;
+  margin: 0;
+  padding-left: 53px;
+  padding-right: 50px;
+  margin-right: 20px
+}
+
+.phone-address {
+  width: 270px;
+  margin-right: 50px;
+}
+
+.phone-address p {
+  margin: 0;
 }
 
 .header-phone {
@@ -141,21 +182,39 @@ a {
   letter-spacing: 0.02em;
   color: #e9292a;
   border: 3px solid #fff;
+  padding-left: 74px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .header-address {
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+  text-align: center;
 }
 
 .user-block ul {
+  width: 300px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .user-block-btn {
   font-size: 21px;
   line-height: 21px;
+}
+
+.enter-btn {
+  width: 122px;
+}
+
+.register-btn {
+  width: 150px;
+  margin-left: 10px;
 }
 
 .user-block-btn a {
@@ -200,10 +259,13 @@ a {
 
 .main-nav-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav {
   background-color: #32425c;
+  box-shadow: inset 0 -5px #293449;
 }
 
 .main-nav a {
@@ -220,6 +282,20 @@ a {
 .main-nav a:active {
   background-color: #1d2739;
   color: rgba(255, 255, 255, 0.5);
+}
+
+ .promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo-item {
+  width: 300px;
+}
+
+.promo-slider {
+  width: 620px;
 }
 
 .promo-item h3 {
@@ -806,3 +882,7 @@ a {
 .modal-cart-top {
   background: url("../img/form-1.svg") no-repeat;
 }
+
+
+
+
