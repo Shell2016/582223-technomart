@@ -356,7 +356,11 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #ee3643;
-  border-radius: 2px;
+  border-radius: 3px;
+  padding-top: 12px;
+  padding-right: 59px;
+  padding-bottom: 10px;
+  padding-left: 64px;
 }
 
 .btn:hover,
@@ -425,6 +429,11 @@ a {
   background-color: #f9f5f0;
   display: flex;
   justify-content: space-between;
+}
+
+.caption-wrapper h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .products-list {
@@ -657,6 +666,11 @@ a {
 }
 
 .footer-logo {
+  display: block;
+  width: 220px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -666,19 +680,45 @@ a {
   text-align: center;
 }
 
+.top-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
 
 .footer-info p {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 53px;
 }
 
 .footer-nav ul {
   list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 42px;
+  justify-content: space-between;
 }
 
 .footer-nav a {
   font-size: 18px;
   line-height: 24px;
+}
+
+.footer-top-nav {
+  width: 547px;
+}
+
+.footer-nav .footer-bottom-nav {
+  width: 524px;
+  margin-left: 23px;
 }
 
 .footer-top-nav a {
@@ -815,7 +855,7 @@ a {
 .submit-btn:active {
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid grey;
+  border: 1px solid #e5e5e5;
 }
 
 .sorting {
@@ -859,7 +899,7 @@ a {
   border: 1px solid #e5e5e5;
   width: 38px;
   height: 38px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .pagination-item a:hover,
@@ -922,7 +962,7 @@ a {
 .feedback-item input,
 .feedback-item textarea {
   border: 2px solid #dee3e4;
-  border-radius: 2px;
+  border-radius: 3px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
