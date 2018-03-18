@@ -50,13 +50,13 @@ a {
 }
 
 .main-header {
-    margin-bottom: 60px;
     padding-bottom: 60px;
 
     background-color: #f3f7f9;
 }
 
 .top-header {
+    min-height: 42px;
     font-size: 17px;
     line-height: 18px;
 
@@ -66,6 +66,7 @@ a {
 
 .top-header .container {
     display: flex;
+    align-items: center;
 
     margin-bottom: 46px;
 }
@@ -75,8 +76,8 @@ a {
     line-height: 24px;
 
     width: 220px;
-    padding-top: 8px;
-    padding-bottom: 5px;
+    min-height: 42px;
+    padding-top: 9px;
 
     text-align: center;
     text-transform: uppercase;
@@ -131,12 +132,14 @@ a {
 
 .order-list {
     display: flex;
+    align-items: center;
 
     width: 450px;
     margin: 0;
     padding: 0;
 
     list-style: none;
+    text-align: center;
 }
 
 .order-list-item {
@@ -144,7 +147,12 @@ a {
 }
 
 .order-list-item a {
-    color: inherit;
+    display: block;
+    color: #fff;
+    background-color: #293449;
+
+
+
 }
 
 .order-list-item a:hover,
@@ -229,6 +237,7 @@ a {
 
 .user-block ul {
     display: flex;
+    flex-wrap: wrap;
 
     width: 300px;
     margin: 0;
@@ -274,6 +283,10 @@ a {
 
 .user-block-btn.user-btn-loggedin a:active {
     color: rgba(0, 0, 0, .3);
+}
+
+.user-loggedin:last-of-type {
+    margin-right: 70px;
 }
 
 .user-loggedin a {
@@ -325,6 +338,7 @@ a {
 }
 
 .promo {
+    margin-top: 60px;
     margin-bottom: 30px;
 }
 
@@ -346,11 +360,17 @@ a {
 
 .promo-item {
     width: 300px;
+    min-height: 123px;
     margin-bottom: 20px;
 }
 
-.promo-slider {
+.promo-slider-item {
     width: 620px;
+    min-height: 266px;
+}
+
+.promo-slider-hidden {
+    display: none;
 }
 
 .promo-slider p {
@@ -504,21 +524,35 @@ a {
     font-weight: 700;
 
     display: flex;
+    flex-wrap: wrap;
 
     margin: 0;
-    margin-bottom: 20px;
     padding: 0;
 
     list-style: none;
 
-    justify-content: space-between;
+
 }
 
 .products-item {
     width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
 
     border: 1px solid #e5e5e5;
     background-color: #fff;
+}
+
+.products-list-catalog {
+    margin-bottom: 30px;
+}
+
+.products-list-index .products-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.products-list-catalog .products-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .products-item:hover {
@@ -762,16 +796,16 @@ a {
     display: block;
 
     width: 220px;
+    min-height: 68px;
     margin-bottom: 35px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 18px;
 
     text-align: center;
     text-transform: uppercase;
 
     color: #fff;
     background-color: #ee3643;
-    box-shadow: 0 5px #b52933;
+    box-shadow: inset 0 -5px #b52933;
 }
 
 .top-footer .container {
@@ -903,11 +937,17 @@ a {
 }
 
 .breadcrumbs {
+    display: flex;
+
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
 
     list-style: none;
+    margin: 0;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 0;
 
     text-transform: uppercase;
 }
@@ -917,6 +957,12 @@ a {
 }
 
 .main-catalog h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 30px;
+    padding-top: 30px;
+    min-height: 89px;
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
@@ -927,13 +973,22 @@ a {
     background-color: #f2f6f8;
 }
 
+.main-catalog-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .filter {
+    width: 220px;
     font-family: 'PT Sans', 'Arial', sans-serif;
 
     text-transform: uppercase;
 }
 
 .filter p {
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
     font-size: 13px;
     line-height: 18px;
 
@@ -942,6 +997,8 @@ a {
 
 .filter-fieldset {
     border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .filter-fieldset legend {
@@ -966,6 +1023,8 @@ a {
 
 .filter-fieldset ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .filter-fieldset label {
@@ -995,7 +1054,13 @@ a {
     background-color: #fff;
 }
 
+.sorting p {
+    padding: 0;
+    margin: 0;
+}
+
 .sorting {
+    margin-bottom: 20px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -1023,15 +1088,21 @@ a {
 
 .pagination {
     list-style: none;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+
+    display: flex;
 }
 
 .pagination-item {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
+    margin-right: 10px;
 
-    text-align: center;
     text-transform: uppercase;
+
 }
 
 .pagination-item a {
@@ -1061,11 +1132,19 @@ a {
     display: none;
 }
 
+.catalog-grid {
+    width: 700px;
+}
+
 .perforator-info {
     background-color: #f3f7f9;
 }
 
 .perforator-info h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 62px;
+    padding-bottom: 30px;
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
@@ -1074,6 +1153,9 @@ a {
 }
 
 .perforator-info p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 72px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     font-weight: 400;
