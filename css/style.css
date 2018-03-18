@@ -325,12 +325,23 @@ a {
 }
 
 .promo {
+    margin-bottom: 30px;
+}
+
+.promo-wrapper1 {
     display: flex;
-
-    margin-bottom: 50px;
-
-    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.promo-wrapper2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.promo-wrapper3 {
+    display: flex;
+    flex-direction: column;
 }
 
 .promo-item {
@@ -342,7 +353,14 @@ a {
     width: 620px;
 }
 
+.promo-slider p {
+    margin: 0;
+    padding: 0;
+}
+
 .promo-item h3 {
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
