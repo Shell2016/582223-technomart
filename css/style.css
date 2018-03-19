@@ -602,6 +602,18 @@ a {
     background-color: #ee3643;
 }
 
+.price:not(.old-price)::after {
+  content: "";
+  position: absolute;
+  right: -19px;
+  top: 0px;
+  border: 19px solid #ee3643;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+
 .price.old-price {
     text-decoration: line-through;
 
