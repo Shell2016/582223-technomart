@@ -35,18 +35,27 @@ a {
     text-decoration: none;
 }
 
-.visually-hidden {
-    position: absolute;
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
 
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
     padding: 0;
 
-    border: 0;
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .main-header {
@@ -420,15 +429,15 @@ a {
 }
 
 .btn {
+    display: inline-block;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
 
-    padding-top: 12px;
-    padding-right: 59px;
+    padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 64px;
+    text-align: center;
 
     text-transform: uppercase;
 
@@ -551,6 +560,7 @@ a {
 
 .product-image {
     min-height: 180px;
+
 }
 
 .products-list-catalog {
@@ -584,10 +594,12 @@ a {
 .products-item h3 {
     margin: 0;
     padding: 0;
+    padding: 0 25px;
     font-size: 18px;
     line-height: 20px;
 
     color: #000;
+    text-align: center;
 }
 
 .price {
@@ -599,6 +611,7 @@ a {
     line-height: 18px;
     padding-top: 10px;
     padding-left: 36px;
+    margin-left: 42px;
 
     color: #fff;
     background-color: #ee3643;
@@ -621,6 +634,7 @@ a {
 
     color: #a9a9a9;
     background-color: #fff;
+
 }
 
 .new {
@@ -631,10 +645,10 @@ a {
   height: 59px;
   top: 0;
   right: 0;
-  font-size: 0;
+  text-indent: -10000px;
 }
 
-.new.new-active {
+.new-active {
   display: block;
 }
 
@@ -642,6 +656,7 @@ a {
     background-color: #63a63e;
     box-shadow: inset 0 -3px #367315;
     margin-bottom: 7px;
+    width: 135px;
 }
 
 .buy-btn:hover,
@@ -656,8 +671,11 @@ a {
 
 .bookmark-btn {
     color: #32425c;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border: 3px solid #63a63e;
     background-color: #fff;
+    width: 135px;
 }
 
 
