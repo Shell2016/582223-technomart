@@ -359,6 +359,7 @@ a {
 }
 
 .promo-item {
+    position: relative;
     width: 300px;
     min-height: 123px;
     margin-bottom: 20px;
@@ -533,6 +534,7 @@ a {
 }
 
 .products-item {
+    position: relative;
     width: 220px;
     min-height: 318px;
     margin-bottom: 20px;
@@ -619,6 +621,21 @@ a {
 
     color: #a9a9a9;
     background-color: #fff;
+}
+
+.new {
+  display: none;
+  position: absolute;
+  background: url("../img/new.png") no-repeat;
+  width: 60px;
+  height: 59px;
+  top: 0;
+  right: 0;
+  font-size: 0;
+}
+
+.new.new-active {
+  display: block;
 }
 
 .buy-btn {
