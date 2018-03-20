@@ -14,7 +14,7 @@ html {
 
 
 body {
-    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     font-weight: 400;
 
@@ -573,8 +573,20 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+p.slider-caption {
+    padding-top: 25px;
+    padding-left: 24px;
+}
+
+p.slider-slogan {
+    padding-left: 24px;
+}
+
 .promo-item h3 {
     margin: 0;
+    margin-top: 22px;
+    margin-left: 23px;
+    margin-bottom: 12px;
     padding: 0;
     font-size: 24px;
     font-weight: 700;
@@ -585,37 +597,42 @@ input[type="radio"].visually-hidden {
 
 .promo-materials {
     background-color: #ffbf47;
-    background-image: url('../img/icon-1.svg');
+    background-image: url("../img/icon-1.svg");
     background-repeat: no-repeat;
+    background-position: 213px center;
 }
 
 .promo-tools {
     background-color: #3bbce3;
-    background-image: url('../img/icon-2.svg');
+    background-image: url("../img/icon-2.svg");
     background-repeat: no-repeat;
+    background-position: 197px center;
 }
 
 .promo-vehicles {
     background-color: #dc91d8;
-    background-image: url('../img/icon-3.svg');
+    background-image: url("../img/icon-3.svg");
     background-repeat: no-repeat;
+    background-position: 191px center;
 }
 
 .promo-discounts {
     background-color: #8ed78f;
-    background-image: url('../img/icon-4.svg');
+    background-image: url("../img/icon-4.svg");
     background-repeat: no-repeat;
+    background-position: 196px center;
 }
 
 .promo-delivery {
     background-color: #ffc047;
-    background-image: url('../img/icon-5.svg');
+    background-image: url("../img/icon-5.svg");
     background-repeat: no-repeat;
+    background-position: 191px center;
 }
 
 .btn {
     display: inline-block;
-    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -642,7 +659,9 @@ input[type="radio"].visually-hidden {
 }
 
 .btn.promo-btn {
+    width: 135px;
     background-color: rgba(238, 54, 67, .1);
+    margin-left: 25px;
 }
 
 .btn.promo-btn:hover,
@@ -665,24 +684,61 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider .slider-slogan {
-    font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+    margin-bottom: 122px;
 
     color: #fff;
 }
 
+.promo-slider-perforators .slider-slogan {
+    font-family: "PT Sans", "Arial", sans-serif;
+}
+
 .promo-slider-drills {
     background-color: #685c53;
-    background-image: url('../img/promo-slider1.jpg');
+    background-image: url("../img/promo-slider1.jpg");
     background-repeat: no-repeat;
 }
 
 .promo-slider-perforators {
     background-color: #685c53;
-    background-image: url('../img/promo-slider2.jpg');
+    background-image: url("../img/promo-slider2.jpg");
     background-repeat: no-repeat;
+}
+
+.promo-slider .btn {
+    width: 195px;
+    margin-left: 25px;
+}
+
+.promo-slider {
+    position: relative;
+}
+
+.promo-control {
+    position: absolute;
+
+    background: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.promo-control.promo-left-control {
+    background: url("../img/icon-left.svg") no-repeat 0 0;
+    top: 114px;
+    left: 25px;
+}
+
+.promo-control.promo-right-control {
+    background: url("../img/icon-right.svg") no-repeat 0 0;
+    top: 114px;
+    right: 25px;
 }
 
 .popular-products h2 {
@@ -702,7 +758,7 @@ input[type="radio"].visually-hidden {
     display: flex;
 
     margin-bottom: 20px;
-    padding: 25px 24px 25px 30px;
+    padding: 30px 24px 25px 30px;
 
     background-color: #f9f5f0;
 
@@ -714,8 +770,12 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.caption-wrapper .btn {
+    width: 253px;
+}
+
 .products-list {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
 
     display: flex;
@@ -965,7 +1025,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services p {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
@@ -993,15 +1053,15 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slider-delivery {
-    background: url('../img/delivery.png') no-repeat;
+    background: url("../img/delivery.png") no-repeat;
 }
 
 .services-slider-waranty {
-    background: url('../img/warranty.png') no-repeat;
+    background: url("../img/warranty.png") no-repeat;
 }
 
 .services-slider-credit {
-    background: url('../img/credit.png') no-repeat;
+    background: url("../img/credit.png") no-repeat;
 }
 
 .info-wrapper .container {
@@ -1026,7 +1086,7 @@ input[type="radio"].visually-hidden {
 }
 
 .info-wrapper p {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
@@ -1200,7 +1260,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs {
     display: flex;
 
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
 
@@ -1241,7 +1301,7 @@ input[type="radio"].visually-hidden {
 
 .filter {
     width: 220px;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 
     text-transform: uppercase;
 }
@@ -1296,7 +1356,7 @@ input[type="radio"].visually-hidden {
 }
 
 .submit-btn {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
 
@@ -1323,7 +1383,7 @@ input[type="radio"].visually-hidden {
 .sorting {
     display: flex;
     margin-bottom: 20px;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
 
@@ -1358,7 +1418,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     margin-right: 10px;
@@ -1418,7 +1478,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     padding-bottom: 72px;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
@@ -1439,7 +1499,7 @@ input[type="radio"].visually-hidden {
 
 .feedback-item input::placeholder,
 .feedback-item textarea::placeholder {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
@@ -1449,7 +1509,7 @@ input[type="radio"].visually-hidden {
 
 .feedback-item input,
 .feedback-item textarea {
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
@@ -1490,5 +1550,5 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-cart-top {
-    background: url('../img/form-1.svg') no-repeat;
+    background: url("../img/form-1.svg") no-repeat;
 }
