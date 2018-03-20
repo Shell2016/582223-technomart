@@ -16,6 +16,7 @@
                 <form action="https://echo.htmlacademy.ru/" method="post" class="search-form">
                     <label class="visually-hidden" for="user-search">Поле поиска</label>
                     <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
+                    <span class="icon-search"></span>
                 </form>
                 <ul class="order-list">
                     <li class="order-list-item bookmarks"><a href="#">Закладки:<span class="bookmarks-count"> 0</span></a></li>
@@ -31,13 +32,15 @@
                 <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
                 <div class="phone-address">
                     <p class="header-phone">+7 (812) 555-05-55</p>
-                    <p class="header-address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                 </div>
                 <div class="user-block">
                     <ul>
-                        <li class="user-block-btn user-btn-loggedin"><a class="user-profile" href="#">Равшан Джамшутович</a><a class="user-logout" href="">Выход</a></li>
-                        <li class="user-loggedin"><a href="#">Мои заказы</a></li>
-                        <li class="user-loggedin"><a href="#">Личный кабинет</a></li>
+                        <li class="user-block-btn user-btn-loggedin user-profile"><a class="user-profile" href="#">Равшан Джамшутович</a></li>
+                        <li class="user-block-btn user-btn-loggedin user-logout"><a class="user-logout" href="#"><span class="visually-hidden">Выход</span></a></li>
+
+                        <li class="user-loggedin my-orders"><a href="#">Мои заказы</a></li>
+                        <li class="user-loggedin user-area"><a href="#">Личный кабинет</a></li>
                     </ul>
                 </div>
             </section>

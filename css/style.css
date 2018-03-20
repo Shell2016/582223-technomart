@@ -113,9 +113,9 @@ input[type="radio"].visually-hidden {
     width: 270px;
 }
 
-.search-form::before {
-    content: "";
+.search-form .icon-search {
     position: absolute;
+    display: block;
     width: 17px;
     height: 17px;
     top: 12px;
@@ -125,12 +125,11 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
-.search-form:hover::before {
+.search-field:hover + .icon-search {
     opacity: 1;
 }
 
-/*по фокусу на форме не работает*/
-.search-form:focus::before {
+.search-field:focus + .icon-search {
     background-image: url("../img/icon-search-red.svg");
     background-repeat: no-repeat;
     opacity: 1;
@@ -188,6 +187,10 @@ input[type="radio"].visually-hidden {
     width: 150px;
     padding-top: 12px;
     padding-left: 44px;
+}
+
+.order-list-item.cart a {
+    padding-left: 48px;
 }
 
 .order-list-item.bookmarks a::before {
@@ -256,7 +259,7 @@ input[type="radio"].visually-hidden {
 .header-info {
     display: flex;
 
-    margin-bottom: 41px;
+    margin-bottom: 38px;
 }
 
 .header-shop-description {
@@ -264,11 +267,10 @@ input[type="radio"].visually-hidden {
     font-style: italic;
     line-height: 23px;
 
-    width: 300px;
+    width: 250px;
     margin: 0;
-    margin-right: 20px;
-    padding-right: 50px;
-    padding-left: 53px;
+    margin-right: 70px;
+    padding-left: 52px;
 
     color: #ee3643;
 }
@@ -280,20 +282,33 @@ input[type="radio"].visually-hidden {
 
 .phone-address p {
     margin: 0;
+    padding: 0;
 }
 
-.header-phone {
+.phone-address .header-phone {
+    position: relative;
     font-size: 21px;
     line-height: 21px;
+    min-height: 45px;
+    width: 270px;
 
     padding-top: 9px;
-    padding-bottom: 9px;
     padding-left: 74px;
-
-    letter-spacing: .02em;
+    margin-bottom: 5px;
 
     color: #e9292a;
     border: 3px solid #fff;
+}
+
+.header-phone::before {
+    content: "";
+    position: absolute;
+    background: url("../img/icon-phone.svg") no-repeat;
+    width: 19px;
+    height: 19px;
+    left: 16px;
+    top: 10px;
+
 }
 
 .header-address {
@@ -309,32 +324,62 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
 
+
     width: 300px;
     margin: 0;
     padding: 0;
 
     list-style: none;
-
-    justify-content: flex-end;
 }
 
 .user-block-btn {
-    font-size: 21px;
-    line-height: 21px;
-}
-
-.enter-btn {
-    width: 122px;
-}
-
-.register-btn {
-    width: 150px;
-    margin-left: 10px;
+    min-height: 45px;
 }
 
 .user-block-btn a {
+    display: block;
     color: #000;
     background-color: #fff;
+    font-size: 21px;
+    line-height: 21px;
+    padding-top: 12px;
+    padding-left: 25px;
+    width: 100%;
+    min-height: 100%;
+}
+
+.user-block-btn.enter-btn {
+    width: 121px;
+}
+
+.user-block-btn.enter-btn a {
+    position: relative;
+    padding-left: 48px;
+}
+
+.user-block-btn.enter-btn a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    background: url("../img/icon-login.svg") no-repeat;
+    top: 14px;
+    left: 14px;
+    opacity: 0.3;
+}
+
+.user-block-btn.enter-btn a:hover::before,
+.user-block-btn.enter-btn a:focus::before {
+    opacity: 1;
+}
+
+.user-block-btn.enter-btn a:active::before {
+    opacity: 0.3;
+}
+
+.user-block-btn.register-btn {
+    width: 150px;
+    margin-left: 10px;
 }
 
 .user-block-btn a:hover,
@@ -346,6 +391,57 @@ input[type="radio"].visually-hidden {
     color: rgba(0, 0, 0, .3);
 }
 
+.user-block-btn.user-profile {
+    width: 255px;
+}
+
+.user-block-btn.user-logout {
+    width: 45px;
+}
+
+.user-block-btn.user-profile a {
+    position: relative;
+    padding-left: 47px;
+}
+
+.user-block-btn.user-profile a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    background: url("../img/icon-user.svg") no-repeat;
+    top: 13px;
+    left: 13px;
+    opacity: 0.3;
+}
+
+.user-block-btn.user-logout a {
+    position: relative;
+}
+
+.user-block-btn.user-logout a::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 17px;
+    background: url("../img/icon-logout.svg") no-repeat;
+    top: 14px;
+    right: 10px;
+    opacity: 0.3;
+}
+
+.user-block-btn.user-profile a:hover::before,
+.user-block-btn.user-profile a:focus::before,
+.user-block-btn.user-logout a:hover::before,
+.user-block-btn.user-logout a:focus::before {
+    opacity: 1;
+}
+
+.user-block-btn.user-profile a:active::before,
+.user-block-btn.user-logout a:active::before {
+    opacity: 0.3;
+}
+
 .user-block-btn.user-btn-loggedin a:hover,
 .user-block-btn.user-btn-loggedin a:focus {
     color: #000;
@@ -355,8 +451,26 @@ input[type="radio"].visually-hidden {
     color: rgba(0, 0, 0, .3);
 }
 
-.user-loggedin:last-of-type {
-    margin-right: 70px;
+
+.user-loggedin {
+    margin-top: 7px;
+    margin-left: 18px;
+}
+
+.user-loggedin.user-area {
+    margin-left: 32px;
+    position: relative;
+}
+
+.user-loggedin.user-area::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 8px;
+    left: -17px;
 }
 
 .user-loggedin a {
