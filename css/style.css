@@ -346,10 +346,12 @@ input[type="radio"].visually-hidden {
     padding-left: 25px;
     width: 100%;
     min-height: 100%;
+
 }
 
 .user-block-btn.enter-btn {
     width: 121px;
+    margin-left: 19px;
 }
 
 .user-block-btn.enter-btn a {
