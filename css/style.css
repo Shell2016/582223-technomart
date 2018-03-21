@@ -821,7 +821,7 @@ p.slider-slogan {
 }
 
 .products-item:hover {
-    border: none;
+    border: 1px solid #fff;
     box-shadow: 0 10px 25px rgba(41, 52, 73, .5);
 }
 
