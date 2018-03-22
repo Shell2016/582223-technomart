@@ -1364,12 +1364,13 @@ p.slider-slogan {
 
 .footer-copyright {
   width: 230px;
-  margin-right: 164px;
+  margin-right: 162px;
+  outline: 1px solid white;
 }
 
 .social-block {
-  margin-right: 57px;
   display: flex;
+  outline: 1px solid white;
 }
 
 .social-btn {
@@ -1383,13 +1384,8 @@ p.slider-slogan {
   justify-content: center;
   align-items: center;
 
-
   background-color: #212a3a;
 }
-
-
-
-
 
 .social-btn:hover,
 .social-btn:focus,
@@ -1397,8 +1393,13 @@ p.slider-slogan {
   background-color: #ee3643;
 }
 
-.footer-feedback-developed {
+.footer-feedback {
+  margin-right: 53px;
   margin-left: auto;
+}
+
+.footer-developed {
+  margin-right: 15px;
 }
 
 .footer-feedback-developed a {
