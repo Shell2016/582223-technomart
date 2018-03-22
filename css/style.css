@@ -1434,10 +1434,6 @@ p.slider-slogan {
   position: relative;
 }
 
-.breadcrumbs-catalog  {
-  margin-left: 15px;
-}
-
 .breadcrumbs a:not(.breadcrumbs-home)::after {
   content: "";
   position: absolute;
@@ -1448,13 +1444,12 @@ p.slider-slogan {
   background: url("../img/icon-right-small.svg") no-repeat;
 }
 
-.breadcrumbs-home::before {
-  content: "";
-  position: absolute;
+.breadcrumbs-home {
+  display: block;
+  margin-top: 3px;
   width: 15px;
   height: 12px;
-  top: 3px;
-  background: url("../img/icon-home.svg") no-repeat;
+  background: url("../img/icon-home.svg") no-repeat 0 0;
 }
 
 .main-catalog h1 {
