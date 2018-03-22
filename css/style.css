@@ -1132,8 +1132,6 @@ p.slider-slogan {
   width: 375px;
 }
 
-
-
 .services-slider-active {
   display: block;
 }
@@ -1263,7 +1261,7 @@ p.slider-slogan {
   display: block;
   width: 220px;
   min-height: 68px;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding-top: 18px;
 
   font-size: 30px;
@@ -1285,6 +1283,7 @@ p.slider-slogan {
   margin: 0;
   padding: 0;
   padding-bottom: 50px;
+  margin-left: 2px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1303,7 +1302,7 @@ p.slider-slogan {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 38px;
   padding: 0;
 
   list-style: none;
@@ -1321,6 +1320,7 @@ p.slider-slogan {
 .footer-nav .footer-bottom-nav {
   width: 524px;
   margin-left: 23px;
+  margin-top: 35px;
 }
 
 .footer-top-nav a {
@@ -1369,13 +1369,27 @@ p.slider-slogan {
 
 .social-block {
   margin-right: 57px;
+  display: flex;
 }
 
 .social-btn {
+  position: relative;
+  width: 40px;
+  margin-right: 4px;
+  height: 40px;
   color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   background-color: #212a3a;
 }
+
+
+
+
 
 .social-btn:hover,
 .social-btn:focus,
