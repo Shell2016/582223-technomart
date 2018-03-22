@@ -1365,12 +1365,10 @@ p.slider-slogan {
 .footer-copyright {
   width: 230px;
   margin-right: 162px;
-  outline: 1px solid white;
 }
 
 .social-block {
   display: flex;
-  outline: 1px solid white;
 }
 
 .social-btn {
@@ -1432,6 +1430,31 @@ p.slider-slogan {
 
 .breadcrumbs a {
   color: #000000;
+  margin-right: 40px;
+  position: relative;
+}
+
+.breadcrumbs-catalog  {
+  margin-left: 15px;
+}
+
+.breadcrumbs a:not(.breadcrumbs-home)::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  top: 3px;
+  left: -24px;
+  background: url("../img/icon-right-small.svg") no-repeat;
+}
+
+.breadcrumbs-home::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 12px;
+  top: 3px;
+  background: url("../img/icon-home.svg") no-repeat;
 }
 
 .main-catalog h1 {
