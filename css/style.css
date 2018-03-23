@@ -1369,6 +1369,7 @@ p.slider-slogan {
 
 .social-block {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social-btn {
@@ -1484,7 +1485,10 @@ p.slider-slogan {
 .filter p {
   margin: 0;
   margin-bottom: 16px;
-  padding: 0;
+  padding: 10px 0 0 20px;
+  min-height: 38px;
+  border-radius: 3px;
+
 
   font-size: 13px;
   line-height: 18px;
@@ -1554,11 +1558,16 @@ p.slider-slogan {
 .sorting p {
   margin: 0;
   padding: 0;
+  padding-left: 20px;
+  margin-right: auto;
 }
 
 .sorting {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 20px;
+  min-height: 38px;
 
   font-size: 13px;
   line-height: 18px;
@@ -1566,6 +1575,23 @@ p.slider-slogan {
   text-transform: uppercase;
 
   background-color: #f7f3ec;
+}
+
+.sorting-down {
+  margin-right: 17px;
+  margin-left: 21px;
+}
+
+.sorting-up {
+  margin-left: 46px;
+}
+
+.sorting-item:nth-of-type(3) {
+  margin-left: 66px;
+}
+
+.sorting-item:nth-of-type(2) {
+  margin-left: 71px;
 }
 
 .sorting a {
@@ -1581,10 +1607,51 @@ p.slider-slogan {
   border-bottom: 1px solid #ee3643;
 }
 
-.sorting a:active {
+
+.sorting a.sorting-arrow {
+  border: none;
+}
+
+.sorting a.sorting-current {
   color: #ee3643;
 
   border: none;
+}
+
+.sorting a.sorting-arrow:hover,
+.sorting a.sorting-arrow:focus {
+  border: none;
+}
+
+.sorting-arrow::before {
+  content: "";
+  display: inline-block;
+  border: 10px solid #c5c5c5;
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.sorting-up::before {
+  border-top-width: 0;
+}
+
+.sorting-down::before {
+  border-bottom-width: 0;
+}
+
+.sorting-arrow:hover::before,
+.sorting-arrow:focus::before {
+  border-color: #231f20;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.sorting-arrow.sorting-current::before {
+  border-color:  #ee3643;
+  border-right-color: transparent;
+  border-left-color: transparent;
 }
 
 .pagination {
