@@ -77,15 +77,17 @@
                             <p>Фильтр:</p>
                             <fieldset class="filter-fieldset filter-price">
                                 <legend>Цена:</legend>
-                                <div class="range-filter-top">
-                                    <div class="range-control range-control-min"></div>
-                                    <div class="range-control range-control-max"></div>
-                                    <div class="range-bar"></div>
+                                <div class="range-controls">
+                                    <div class="range-scale">
+                                        <div class="range-bar"></div>
+                                    </div>
+                                    <div class="range-toggle range-toggle-min"></div>
+                                    <div class="range-toggle range-toggle-max"></div>
                                 </div>
-                                <div class="range-filter-bottom">
+                                <div class="price-controls">
                                     <input class="range-input range-input-min" type="text" name="min-price" id="filter-min-price" value="0">
                                     <label for="filter-min-price" class="visually-hidden">Минимальная цена</label>
-                                    <span class="input-dash">-</span>
+                                    <span class="price-controls-dash"></span>
                                     <input class="range-input range-input-max" type="text" name="max-price" id="filter-max-price" value="30000">
                                     <label for="filter-max-price" class="visually-hidden">Максимальная цена</label>
                                 </div>

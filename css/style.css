@@ -1501,6 +1501,8 @@ p.slider-slogan {
   padding: 0;
 
   border: none;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 18px;
 }
 
 .filter-fieldset legend {
@@ -1508,18 +1510,77 @@ p.slider-slogan {
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
-.range-filter-top {
+.range-controls {
+  position: relative;
   background-color: #f7f3ec;
+  height: 80px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-bottom: 10px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.range-filter-bottom input {
+.range-controls .range-scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.range-controls .range-bar {
+  height: 2px;
+  width: 80%;
+  background-color: #00ca74;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ababab;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0px 2px #e0ddd8;
+  top: 30px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 20px;
+}
+
+.range-toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 26px;
+
+}
+
+.price-controls input {
   font-size: 17px;
   line-height: 18px;
+  width: 95px;
+  height: 38px;
+  border-radius: 2px;
+  text-align: center;
 
   background-color: #f7f3ec;
   border: none;
+}
+
+.price-controls-dash {
+  height: 1px;
+  width: 10px;
+  background-color: #444444;
 }
 
 .filter-fieldset ul {
