@@ -1484,7 +1484,7 @@ p.slider-slogan {
 
 .filter p {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding: 10px 0 0 20px;
   min-height: 38px;
   border-radius: 3px;
@@ -1502,7 +1502,7 @@ p.slider-slogan {
 
   border: none;
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .filter-fieldset legend {
@@ -1511,6 +1511,23 @@ p.slider-slogan {
   line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 14px;
+}
+
+.filter-fieldset ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-fieldset label {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-fieldset input:disabled ~ label {
+  color: #b5b5b5;
 }
 
 .range-controls {
@@ -1583,18 +1600,66 @@ p.slider-slogan {
   background-color: #444444;
 }
 
-.filter-fieldset ul {
-  margin: 0;
-  padding: 0;
+.filter-manufacturers-item {
 
-  list-style: none;
+  position: relative;
+  margin-bottom: 19px;
 }
 
-.filter-fieldset label {
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
+.filter-manufacturers-item label {
+  margin-left: 35px;
 }
+
+.filter-manufacturers-item input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #c5c5c5;
+  border-radius: 2px;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:focus + .checkbox-indicator {
+  outline: 5px auto #5E9ED6;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:checked + .checkbox-indicator::before,
+ .filter-manufacturers-item input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  background-color: #c5c5c5;
+  left: 10px;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:checked + .checkbox-indicator::before {
+  width: 20px;
+  height: 4px;
+  top: 12px;
+  box-shadow: 0px 0px 1px 1px #fff;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:checked + .checkbox-indicator::after {
+  width: 4px;
+  height: 11px;
+  top: 5px;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:hover + .checkbox-indicator {
+  border-color: #b5b5b5;
+}
+
+.filter-manufacturers-item input[type="checkbox"]:checked:hover + .checkbox-indicator::before,
+ .filter-manufacturers-item input[type="checkbox"]:checked:hover + .checkbox-indicator::after {
+  background-color: #b5b5b5;
+ }
+
+
+
+
+
+
+
 
 .submit-btn {
   font-size: 13px;
@@ -1629,6 +1694,7 @@ p.slider-slogan {
   justify-content: flex-end;
   margin-bottom: 20px;
   min-height: 38px;
+  border-radius: 3px;
 
   font-size: 13px;
   line-height: 18px;
