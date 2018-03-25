@@ -856,7 +856,11 @@ p.slider-slogan {
   padding: 0;
 }
 
-h2.manufacturers-title {
+.caption-wrapper h2.popular-products-title {
+  margin-top: 5px;
+}
+
+.caption-wrapper h2.manufacturers-title {
   margin-left: -3px;
 }
 
@@ -1199,6 +1203,7 @@ h2.manufacturers-title {
   color: #ffffff;
 
   background-color: #32425c;
+  cursor: pointer;
 }
 
 .services-slider label {
@@ -1699,7 +1704,7 @@ h2.manufacturers-title {
   position: relative;
 
   height: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -1846,18 +1851,23 @@ input[type="checkbox"]:checked:hover + .checkbox-label .checkbox-indicator::afte
   background-color: #b5b5b5;
 }
 
-input[type="checkbox"]:disabled + .checkbox-label .checkbox-indicator {
+/* input[type="checkbox"]:disabled + .checkbox-label .checkbox-indicator {
   border-color: #e9e9e9;
-}
+} */
 
 input[type="checkbox"]:disabled + .checkbox-label {
-  color: #e9e9e9;
+  color: #b5b5b5;
+  opacity: 0.3;
 }
 
-input[type="checkbox"]:checked:disabled + .checkbox-label .checkbox-indicator::before,
+/* input[type="checkbox"]:hover:disabled + .checkbox-label {
+  color: #e9e9e9;
+} */
+
+/* input[type="checkbox"]:checked:disabled + .checkbox-label .checkbox-indicator::before,
 input[type="checkbox"]:checked:disabled + .checkbox-label .checkbox-indicator::after {
   background-color: #e9e9e9;
-}
+} */
 
 .filter-power-item {
   margin-bottom: 20px;
@@ -2000,6 +2010,11 @@ input[type="radio"]:disabled + .radio-label {
   border-bottom: 1px solid #ee3643;
 }
 
+.sorting a:active {
+  color: #ee3643;
+  border: none;
+}
+
 .sorting a.sorting-arrow {
   border: none;
 }
@@ -2011,7 +2026,8 @@ input[type="radio"]:disabled + .radio-label {
 }
 
 .sorting a.sorting-arrow:hover,
-.sorting a.sorting-arrow:focus {
+.sorting a.sorting-arrow:focus,
+.sorting a.sorting-arrow:active {
   border: none;
 }
 
@@ -2043,6 +2059,12 @@ input[type="radio"]:disabled + .radio-label {
 }
 
 .sorting-arrow.sorting-current::before {
+  border-color: #ee3643;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.sorting-arrow:active::before {
   border-color: #ee3643;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -2110,6 +2132,10 @@ input[type="radio"]:disabled + .radio-label {
 
 .pagination-hidden {
   display: none;
+}
+
+.pagination-previous a {
+  width: 140px;
 }
 
 .catalog-grid {
