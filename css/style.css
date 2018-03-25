@@ -2355,5 +2355,12 @@ p.feedback-item:last-child {
   background-position: top left;
 }
 
+.map-popup {
+  width: 940px;
+  height: 446px;
+  border: none;
+  background-color: grey;
+  box-shadow: 0 0 30px #2f2a2b;
+}
 
 
