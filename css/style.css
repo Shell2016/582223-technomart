@@ -2363,4 +2363,7 @@ p.feedback-item:last-child {
   box-shadow: 0 0 30px #2f2a2b;
 }
 
+.modal-show {
+  display: block;
+}
 
