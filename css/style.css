@@ -1008,6 +1008,11 @@ p.slider-slogan {
   background: url("../img/new.png") no-repeat;
 }
 
+.promo-item .new {
+  top: 0;
+  right: 0;
+}
+
 .new-active {
   display: block;
 }
