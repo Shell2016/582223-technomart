@@ -642,6 +642,7 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider-item {
+  position: relative;
   display: none;
   width: 620px;
   min-height: 266px;
@@ -649,6 +650,31 @@ input[type="radio"].visually-hidden {
 
 .promo-slider-active {
   display: block;
+}
+
+.promo-slider-item::before,
+.promo-slider-item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #fff;
+  bottom: 36px;
+  left: 295px;
+}
+
+.promo-slider-item::after {
+  left: 315px;
+}
+
+.promo-slider-drills::after {
+  background-color: #ee3643;
+}
+
+.promo-slider-perforators::before {
+  background-color: #ee3643;
 }
 
 .promo-slider p {
