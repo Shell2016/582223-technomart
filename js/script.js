@@ -38,7 +38,47 @@ for (var x = 0; x < close.length; x++) {
     });
 }
 
+var deliveryTab = document.querySelector("#delivery + label");
+var warantyTab = document.querySelector("#waranty + label");
+var creditTab = document.querySelector("#credit + label");
+var servicesSlider = document.querySelectorAll(".services-slider-item");
+var servicesSliderDelivery = document.querySelector(".services-slider-delivery");
+var servicesSliderWaranty = document.querySelector(".services-slider-waranty");
+var servicesSliderCredit = document.querySelector(".services-slider-credit");
 
+
+if (deliveryTab) {
+    deliveryTab.addEventListener("click", function(event) {
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSlider[i].classList.remove("services-slider-active");
+        }
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSliderDelivery.classList.add("services-slider-active");
+        }
+    });
+}
+
+if (warantyTab) {
+    warantyTab.addEventListener("click", function(event) {
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSlider[i].classList.remove("services-slider-active");
+        }
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSliderWaranty.classList.add("services-slider-active");
+        }
+    });
+}
+
+if (creditTab) {
+    creditTab.addEventListener("click", function(event) {
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSlider[i].classList.remove("services-slider-active");
+        }
+        for (i = 0; i < servicesSlider.length; i++) {
+            servicesSliderCredit.classList.add("services-slider-active");
+        }
+    });
+}
 
 
 
