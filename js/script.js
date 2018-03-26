@@ -8,10 +8,12 @@ var close = document.querySelectorAll(".modal-close");
 var modal = document.querySelectorAll(".modal");
 
 
-if (feedbackOpen) {
+if (feedback) {
+    var username = feedback.querySelector(".name-field");
     feedbackOpen.addEventListener("click", function (event) {
         event.preventDefault();
         feedback.classList.add("modal-show");
+        username.focus();
     });
 }
 
@@ -37,6 +39,7 @@ for (i = 0; i < close.length; i++) {
         }
     });
 }
+
 
 
 var deliveryTab = document.querySelector("#delivery + label");
