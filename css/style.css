@@ -642,12 +642,13 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider-item {
+  display: none;
   width: 620px;
   min-height: 266px;
 }
 
-.promo-slider-hidden {
-  display: none;
+.promo-slider-active {
+  display: block;
 }
 
 .promo-slider p {

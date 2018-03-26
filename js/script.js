@@ -29,14 +29,15 @@ for (var i = 0; i < cartOpen.length; i++) {
     });
 }
 
-for (var x = 0; x < close.length; x++) {
-    close[x].addEventListener("click", function (event) {
+for (i = 0; i < close.length; i++) {
+    close[i].addEventListener("click", function (event) {
         event.preventDefault();
         for (var y = 0; y < modal.length; y++) {
             modal[y].classList.remove("modal-show");
         }
     });
 }
+
 
 var deliveryTab = document.querySelector("#delivery + label");
 var warantyTab = document.querySelector("#waranty + label");
@@ -46,15 +47,12 @@ var servicesSliderDelivery = document.querySelector(".services-slider-delivery")
 var servicesSliderWaranty = document.querySelector(".services-slider-waranty");
 var servicesSliderCredit = document.querySelector(".services-slider-credit");
 
-
 if (deliveryTab) {
     deliveryTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
-        for (i = 0; i < servicesSlider.length; i++) {
-            servicesSliderDelivery.classList.add("services-slider-active");
-        }
+        servicesSliderDelivery.classList.add("services-slider-active");
     });
 }
 
@@ -63,9 +61,7 @@ if (warantyTab) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
-        for (i = 0; i < servicesSlider.length; i++) {
-            servicesSliderWaranty.classList.add("services-slider-active");
-        }
+        servicesSliderWaranty.classList.add("services-slider-active");
     });
 }
 
@@ -74,11 +70,25 @@ if (creditTab) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
-        for (i = 0; i < servicesSlider.length; i++) {
-            servicesSliderCredit.classList.add("services-slider-active");
-        }
+        servicesSliderCredit.classList.add("services-slider-active");
     });
 }
+
+
+var promoSlider = document.querySelectorAll(".promo-slider-item");
+var promoControl = document.querySelectorAll(".promo-control");
+
+if (promoControl) {
+    for (i = 0; i < promoControl.length; i++) {
+        promoControl[i].addEventListener("click", function(event) {
+            event.preventDefault();
+            for (y = 0; y < promoSlider.length; y++) {
+                promoSlider[y].classList.toggle("promo-slider-active");
+            }
+        });
+    }
+}
+
 
 
 
