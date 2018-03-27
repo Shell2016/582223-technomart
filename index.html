@@ -14,8 +14,9 @@
             <div class="container">
                 <a class="logo">Техномарт</a>
                 <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
-                    <label class="visually-hidden" for="user-search">Поле поиска</label>
-                    <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:">
+                    <!-- <label class="visually-hidden" for="user-search">Поле поиска</label> -->
+                    <!-- Баг с появлением лейбла при клике на поле в IE-->
+                    <input class="search-field" type="search" name="search" id="user-search" placeholder="Поиск:" aria-label="Поле поиска">
                     <span class="icon-search"></span>
                 </form>
                 <ul class="order-list">

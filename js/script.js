@@ -13,20 +13,32 @@ if (feedback) {
     var username = feedback.querySelector(".name-field");
     var email = feedback.querySelector(".email-field");
     var comment = feedback.querySelector(".comment-field");
+    var nameStorage = localStorage.getItem("username");
+    var emailStorage = localStorage.getItem("email");
 
     feedbackOpen.addEventListener("click", function (event) {
         event.preventDefault();
         feedback.classList.add("modal-show");
-        username.focus();
+        if (nameStorage && emailStorage) {
+            username.value = nameStorage;
+            email.value = emailStorage;
+            comment.focus();
+        } else {
+            username.focus();
+        }
     });
 
     feedbackForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        console.log(username.value);
-        console.log(email.value);
-        console.log(comment.value);
+        if (!username.value || !email.value || !comment.value) {
+            console.log ("Заполните поля формы!");
+        } else {
+            localStorage.setItem("username", username.value);
+            localStorage.setItem("email", email.value);
+        }
     });
 }
+
 
 if (map) {
     mapOpen.addEventListener("click", function (event) {
@@ -35,12 +47,14 @@ if (map) {
     });
 }
 
+
 for (var i = 0; i < cartOpen.length; i++) {
     cartOpen[i].addEventListener("click", function (event) {
         event.preventDefault();
         cart.classList.add("modal-show");
     });
 }
+
 
 for (i = 0; i < close.length; i++) {
     close[i].addEventListener("click", function (event) {
@@ -51,8 +65,14 @@ for (i = 0; i < close.length; i++) {
     });
 }
 
-
-
+window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27 ) {
+        event.preventDefault();
+        for (var y = 0; y < modal.length; y++) {
+            modal[y].classList.remove("modal-show");
+        }
+    }
+});
 
 
 var deliveryTab = document.querySelector("#delivery + label");
@@ -63,21 +83,25 @@ var servicesSliderDelivery = document.querySelector(".services-slider-delivery")
 var servicesSliderWaranty = document.querySelector(".services-slider-waranty");
 var servicesSliderCredit = document.querySelector(".services-slider-credit");
 
-if (servicesSlider) {
+if (deliveryTab) {
     deliveryTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
         servicesSliderDelivery.classList.add("services-slider-active");
     });
+}
 
+if (warantyTab) {
     warantyTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
         servicesSliderWaranty.classList.add("services-slider-active");
     });
+}
 
+if (creditTab) {
     creditTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
