@@ -9,15 +9,26 @@ var modal = document.querySelectorAll(".modal");
 
 
 if (feedback) {
+    var feedbackForm = feedback.querySelector(".feedback-form");
     var username = feedback.querySelector(".name-field");
+    var email = feedback.querySelector(".email-field");
+    var comment = feedback.querySelector(".comment-field");
+
     feedbackOpen.addEventListener("click", function (event) {
         event.preventDefault();
         feedback.classList.add("modal-show");
         username.focus();
     });
+
+    feedbackForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        console.log(username.value);
+        console.log(email.value);
+        console.log(comment.value);
+    });
 }
 
-if (mapOpen) {
+if (map) {
     mapOpen.addEventListener("click", function (event) {
         event.preventDefault();
         map.classList.add("modal-show");
@@ -42,6 +53,8 @@ for (i = 0; i < close.length; i++) {
 
 
 
+
+
 var deliveryTab = document.querySelector("#delivery + label");
 var warantyTab = document.querySelector("#waranty + label");
 var creditTab = document.querySelector("#credit + label");
@@ -50,25 +63,21 @@ var servicesSliderDelivery = document.querySelector(".services-slider-delivery")
 var servicesSliderWaranty = document.querySelector(".services-slider-waranty");
 var servicesSliderCredit = document.querySelector(".services-slider-credit");
 
-if (deliveryTab) {
+if (servicesSlider) {
     deliveryTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
         servicesSliderDelivery.classList.add("services-slider-active");
     });
-}
 
-if (warantyTab) {
     warantyTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
         servicesSliderWaranty.classList.add("services-slider-active");
     });
-}
 
-if (creditTab) {
     creditTab.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
@@ -81,7 +90,7 @@ if (creditTab) {
 var promoSlider = document.querySelectorAll(".promo-slider-item");
 var promoControl = document.querySelectorAll(".promo-control");
 
-if (promoControl) {
+if (promoSlider) {
     for (i = 0; i < promoControl.length; i++) {
         promoControl[i].addEventListener("click", function(event) {
             event.preventDefault();
