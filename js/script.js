@@ -77,6 +77,7 @@ for (i = 0; i < close.length; i++) {
         event.preventDefault();
         for (var y = 0; y < modal.length; y++) {
             modal[y].classList.remove("modal-show");
+            modal[y].classList.remove("modal-error");
         }
         overlay.classList.remove("overlay-show");
     });
@@ -90,6 +91,7 @@ window.addEventListener("keydown", function(event) {
                 event.preventDefault();
                 modal[y].classList.remove("modal-show");
             }
+            modal[y].classList.remove("modal-error");
         }
         overlay.classList.remove("overlay-show");
     }
@@ -99,6 +101,7 @@ overlay.addEventListener("click", function (event) {
     event.preventDefault();
     for (var y = 0; y < modal.length; y++) {
             modal[y].classList.remove("modal-show");
+            modal[y].classList.remove("modal-error");
         }
     overlay.classList.remove("overlay-show");
 });
