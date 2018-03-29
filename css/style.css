@@ -661,30 +661,33 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.promo-slider-item::before,
-.promo-slider-item::after {
+.promo-slider-item .circle-control {
   content: "";
   position: absolute;
   bottom: 36px;
   left: 295px;
+  margin: 0;
+  padding: 0;
 
   width: 10px;
   height: 10px;
-
+  border: 0;
   background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
-.promo-slider-item::after {
+.promo-slider-item .circle-control:last-of-type {
   left: 315px;
 }
 
-.promo-slider-drills::after {
+.promo-slider-drills .circle-control:last-of-type {
   background-color: #ee3643;
 }
 
-.promo-slider-perforators::before {
+.promo-slider-perforators .circle-control:first-of-type {
   background-color: #ee3643;
 }
 
