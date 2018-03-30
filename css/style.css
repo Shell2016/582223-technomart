@@ -609,6 +609,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -1178,11 +1180,11 @@ p.slider-slogan {
   position: relative;
 }
 
-.services .container::after {
+.services-slider::after {
   content: "";
   position: absolute;
-  top: 130px;
-  left: 240px;
+  top: -40px;
+  left: 230px;
 
   width: 10px;
   height: 272px;
@@ -1228,6 +1230,7 @@ p.slider-slogan {
 }
 
 .services-slider {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1797,6 +1800,13 @@ p.slider-slogan {
   -webkit-box-shadow: 0 2px #e0ddd8;
           box-shadow: 0 2px #e0ddd8;
   cursor: pointer;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  background-color: #FF0000;
+  box-shadow: 0 2px 1px #ababab;
+  outline: none;
 }
 
 .range-toggle-min {
