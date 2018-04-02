@@ -8,6 +8,18 @@ var close = document.querySelectorAll(".modal-close");
 var modal = document.querySelectorAll(".modal");
 var overlay = document.querySelector(".overlay");
 
+var modalOpen = function(modalName) {
+        modalName.classList.add("modal-show");
+        overlay.classList.add("overlay-show");
+};
+
+var modalClose = function() {
+    for (var j = 0; j < modal.length; j++) {
+            modal[j].classList.remove("modal-show");
+            modal[j].classList.remove("modal-error");
+        }
+    overlay.classList.remove("overlay-show");
+};
 
 if (feedback) {
     var feedbackForm = feedback.querySelector(".feedback-form");
@@ -26,8 +38,7 @@ if (feedback) {
 
     feedbackOpen.addEventListener("click", function (event) {
         event.preventDefault();
-        feedback.classList.add("modal-show");
-        overlay.classList.add("overlay-show");
+        modalOpen(feedback);
         if (nameStorage && emailStorage) {
             username.value = nameStorage;
             email.value = emailStorage;
@@ -57,8 +68,7 @@ if (feedback) {
 if (map) {
     mapOpen.addEventListener("click", function (event) {
         event.preventDefault();
-        map.classList.add("modal-show");
-        overlay.classList.add("overlay-show");
+        modalOpen(map);
     });
 }
 
@@ -66,8 +76,7 @@ if (map) {
 for (var i = 0; i < cartOpen.length; i++) {
     cartOpen[i].addEventListener("click", function (event) {
         event.preventDefault();
-        cart.classList.add("modal-show");
-        overlay.classList.add("overlay-show");
+        modalOpen(cart);
     });
 }
 
@@ -75,23 +84,18 @@ for (var i = 0; i < cartOpen.length; i++) {
 for (i = 0; i < close.length; i++) {
     close[i].addEventListener("click", function (event) {
         event.preventDefault();
-        for (var y = 0; y < modal.length; y++) {
-            modal[y].classList.remove("modal-show");
-            modal[y].classList.remove("modal-error");
-        }
-        overlay.classList.remove("overlay-show");
+        modalClose();
     });
 }
 
-
 window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27 ) {
-        for (var y = 0; y < modal.length; y++) {
-            if (modal[y].classList.contains("modal-show")) {
+        for (var j = 0; j < modal.length; j++) {
+            if (modal[j].classList.contains("modal-show")) {
                 event.preventDefault();
-                modal[y].classList.remove("modal-show");
+                modal[j].classList.remove("modal-show");
             }
-            modal[y].classList.remove("modal-error");
+            modal[j].classList.remove("modal-error");
         }
         overlay.classList.remove("overlay-show");
     }
@@ -99,11 +103,7 @@ window.addEventListener("keydown", function(event) {
 
 overlay.addEventListener("click", function (event) {
     event.preventDefault();
-    for (var y = 0; y < modal.length; y++) {
-            modal[y].classList.remove("modal-show");
-            modal[y].classList.remove("modal-error");
-        }
-    overlay.classList.remove("overlay-show");
+    modalClose();
 });
 
 
@@ -115,31 +115,35 @@ var servicesSliderDelivery = document.querySelector(".services-slider-delivery")
 var servicesSliderWaranty = document.querySelector(".services-slider-waranty");
 var servicesSliderCredit = document.querySelector(".services-slider-credit");
 
-if (deliveryTab) {
-    deliveryTab.addEventListener("click", function(event) {
+var clickTab = function(tabName) {
+    if (tabName === deliveryTab) {
+        var servicesSliderName = servicesSliderDelivery;
+    }
+    if (tabName === warantyTab) {
+        servicesSliderName = servicesSliderWaranty;
+    }
+    if (tabName === creditTab) {
+        servicesSliderName = servicesSliderCredit;
+    }
+    tabName.addEventListener("click", function(event) {
         for (i = 0; i < servicesSlider.length; i++) {
             servicesSlider[i].classList.remove("services-slider-active");
         }
-        servicesSliderDelivery.classList.add("services-slider-active");
+        servicesSliderName.classList.add("services-slider-active");
     });
+};
+
+
+if (deliveryTab) {
+    clickTab(deliveryTab);
 }
 
 if (warantyTab) {
-    warantyTab.addEventListener("click", function(event) {
-        for (i = 0; i < servicesSlider.length; i++) {
-            servicesSlider[i].classList.remove("services-slider-active");
-        }
-        servicesSliderWaranty.classList.add("services-slider-active");
-    });
+    clickTab(warantyTab);
 }
 
 if (creditTab) {
-    creditTab.addEventListener("click", function(event) {
-        for (i = 0; i < servicesSlider.length; i++) {
-            servicesSlider[i].classList.remove("services-slider-active");
-        }
-        servicesSliderCredit.classList.add("services-slider-active");
-    });
+    clickTab(creditTab);
 }
 
 
