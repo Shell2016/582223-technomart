@@ -149,16 +149,29 @@ if (creditTab) {
 
 var promoSlider = document.querySelectorAll(".promo-slider-item");
 var promoControl = document.querySelectorAll(".promo-control");
+var promoDrillsBtn = document.querySelector(".promo-slider-drills .circle-control:first-of-type");
+var promoPerfoBtn = document.querySelector(".promo-slider-perforators .circle-control:last-of-type");
 
 if (promoSlider) {
     for (i = 0; i < promoControl.length; i++) {
         promoControl[i].addEventListener("click", function(event) {
             event.preventDefault();
-            for (y = 0; y < promoSlider.length; y++) {
-                promoSlider[y].classList.toggle("promo-slider-active");
+            for (j = 0; j < promoSlider.length; j++) {
+                promoSlider[j].classList.toggle("promo-slider-active");
             }
         });
     }
+    var promoSliderBtn = function (circleBtn) {
+        circleBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            for (j = 0; j < promoSlider.length; j++) {
+                promoSlider[j].classList.toggle("promo-slider-active");
+            }
+        });
+    };
+
+    promoSliderBtn(promoDrillsBtn);
+    promoSliderBtn(promoPerfoBtn);
 }
 
 
